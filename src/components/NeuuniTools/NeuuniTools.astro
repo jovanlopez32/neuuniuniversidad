@@ -1,0 +1,28 @@
+---
+import ToolsContent from './ToolsContent.astro'
+
+---
+<div class="flex px-10">
+    <div class=" hidden w-full lg:flex items-center">
+        <aside class="w-full max-w-xl flex items-center self-start sticky top-1/3  ">
+            <div>
+               <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Herramientas Neuuni</h1>
+               <p>Nuestra plataforma integra herramientas pedagógicas diseñadas para facilitar la comprensión de los contenidos, explorar en profundidad los temas y mantener un equilibrio entre la educación y la tecnología.</p>
+                
+            </div>
+        </aside>
+    </div>
+    
+    <main class="w-full flex flex-col items-start justify-center ">
+        <ToolsContent title="Neuuni Connect" text="" />
+        <ToolsContent title="Neuuni Play" text=""/>
+        <ToolsContent title="Neuuni Space" text=""/>
+        
+    </main>
+</div>
+
+<script>
+    import ScrollReveal from 'scrollreveal';
+    ScrollReveal({ reset: true }).reveal('.headline', { delay: 500 });
+</script>
+

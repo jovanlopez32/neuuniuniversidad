@@ -1,0 +1,30 @@
+---
+import LinkHeader from './buttons/LinkHeader.astro'
+import PlataformButton from './buttons/PlataformButton.astro'
+import NeuuniUniversidadLogo from '../assets/NeuuniUniversidad.astro'
+import NeuuniLogo from '../assets/Neuuni.astro'
+---
+<header 
+class=" fixed w-full flex items-center justify-between z-40
+py-5 px-8
+isolate backdrop-blur-md bg-dark-200/30 dark:bg-dark-900/30 ">
+    <div class="flex items-center gap-3">
+        <NeuuniLogo class="fill-nprimary size-10"/>
+        <h1 class="font-bold text-xl">Neuuni Universidad</h1> 
+    </div>
+
+    <nav class="md:flex items-center gap-x-10 hidden ">
+       <LinkHeader href="/" text="Oferta Educativa" />
+       <LinkHeader href="/" text="Webinar" />
+       <LinkHeader href="/" text="Blog Neuuni" />
+
+       <PlataformButton />
+
+       
+    </nav>
+
+
+
+    
+
+</header>

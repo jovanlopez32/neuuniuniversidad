@@ -1,0 +1,29 @@
+---
+// Supports weights 100-900
+import '@fontsource-variable/onest';
+// Components
+import Header from '../components/Header.astro'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <meta name="generator" content={Astro.generator} /> -->
+    <title>Neuuni Universidad</title>
+</head>
+<body class="bg-neutral-950 text-neutral-200">
+
+    <Header />
+    <slot />
+    
+</body>
+
+<style is:global>
+    body {
+        font-family: 'Onest Variable', sans-serif;
+    }
+</style>
+</html>
