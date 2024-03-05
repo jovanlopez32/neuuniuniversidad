@@ -1,4 +1,5 @@
 ---
+
 interface Props {
     title: string
     text: string
@@ -7,22 +8,21 @@ interface Props {
 const { title, text } = Astro.props
 ---
 <div 
-    class="w-full h-80 max-w-xl 
-    rounded-md 
-    flex flex-col justify-center ">
+    class="w-full
+    py-6 mb-5 md:mb-20
+    flex flex-col justify-center">
 
-    <div class=" flex flex-col gap-5">
-        <h3 class="text-3xl font-semibold">{title}</h3>
-        <p class="text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatibus accusamus officia repudiandae asperiores! Consequatur unde facilis quod quis dolores corporis iusto facere temporibus rerum iste, illo architecto cupiditate ad labore laborum esse beatae porro commodi nam assumenda eligendi! Animi.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-4">
+        <div class="w-full h-full grid place-content-start md:place-content-center md:border-r-4 border-r-neutral-800">
+            <slot name="icon"/>
+        </div>
 
-        <div class="w-full h-20">
-            <img class="w-full h-full object-cover" src="https://unineuuni.edu.mx/sites/default/files/styles/imagen_730x450/public/noticias/2024-02/15feb_1.jpg?h=225e6152&itok=SJZGX2KS" alt="">
+        <div class="col-span-2 max-w-md">
+            <div class="flex items-center gap-x-5 mb-4">
+                <div class="size-3 rounded-full bg-nprimary grid place-content-center "><div class="size-3 rounded-full bg-nprimary animate-ping"></div></div>
+                <h3 class="text-3xl font-semibold">{title}</h3>
+            </div>
+            <p class="text-base text-pretty ">{text}</p>
         </div>
     </div>
-    <!-- <h1 class="text-2xl md:text-3xl font-bold mb-4">Neuuni Space</h1>
-    <p class="text-sm text-pretty">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex porro distinctio dolores adipisci similique molestiae praesentium fugit consectetur aspernatur, quae minima at in eum vero cum obcaecati deleniti voluptatem exercitationem corrupti blanditiis accusamus natus! Deserunt, adipisci. Corporis ullam atque velit nihil obcaecati deleniti voluptate ipsa. Facere porro iste sed culpa omnis repellat.</p>
-
-    <div class="text-sm w-full h-40">
-        <img class="w-full h-full object-cover" src="https://unineuuni.edu.mx/sites/default/files/styles/imagen_730x450/public/noticias/2024-02/15feb_1.jpg?h=225e6152&itok=SJZGX2KS" alt="">
-    </div> -->
 </div>
