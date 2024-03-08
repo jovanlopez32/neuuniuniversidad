@@ -1,12 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
+import PrimaryButton from '../components/buttons/PrimaryButton.astro'
+import HeroHS from '../components/Hero.vue'
 import NeuuniTools from '../components/NeuuniTools/NeuuniTools.astro'
 ---
 
 <Layout>
 
-	<Hero />
+	<HeroHS client:load />
+		
 	<NeuuniTools />
 
 </Layout>
