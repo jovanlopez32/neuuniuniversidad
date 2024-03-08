@@ -99,6 +99,10 @@ watch(active, () => {
 
 <template>
 <div class="w-full min-h-screen flex items-center justify-center relative overflow-x-clip px-8 mb-10 ">
+    
+    <!-- Video -->
+    <video class="object-cover absolute h-full w-full opacity-30" src="/videoneuuni.mp4" autoplay loop muted></video>
+
     <!-- Background -->
     <div class="h-full w-full absolute top-0 -z-10">
         <div class=" h-1/2 w-1/3 absolute bottom-auto left-auto -right-10 md:-right-40 top-1/4 blur-2xl bg-nprimary/30 rounded-full"></div>
@@ -127,6 +131,7 @@ watch(active, () => {
               leaveFrom="opacity-100 "
               leaveTo="opacity-0"
             >
+                
                 
                 <div class="w-full max-w-4xl flex flex-wrap md:flex-nowrap items-strech gap-x-10 gap-y-4">
                     <div v-show="item.image">
