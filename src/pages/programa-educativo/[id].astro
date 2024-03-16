@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SingleEducationalProgram from "../../components/SingleEducationalProgram.vue";
+
+export async function getStaticPaths() {
+  const url = `http://localhost:1337/api/programas-educativos/?populate=*`;
+  const respuesta = await fetch(url);
+  const { data } = await respuesta.json();
+
+  return data.map((programa_educativo) => ({
+    params: {
+      id: programa_educativo.attributes.slug,
+    },
+    props: {
+      programa_educativo: programa_educativo.attributes,
+    },
+  }));
+}
+
+
+const { nombre, createdAt, slug } = Astro.props.programa_educativo;
+---
+
+<Layout>
+    <SingleEducationalProgram nombre={nombre} slug={slug}/>
+</Layout>
