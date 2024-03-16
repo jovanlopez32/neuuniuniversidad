@@ -15,6 +15,8 @@ const items = [
         secondaryButtonLink: '#uno',
         image: false,
         imageLink: '',
+        video: true,
+        videoLink: '/videoneuuni.mp4',
         imageDescription: '',
     },
     {
@@ -29,6 +31,8 @@ const items = [
         secondaryButtonLink: '#uno',
         image: false,
         imageLink: '',
+        video: true,
+        videoLink: '',
         imageDescription: '',
     },
     {
@@ -43,6 +47,8 @@ const items = [
         secondaryButtonLink: '#uno',
         image: false,
         imageLink: '',
+        video: true,
+        videoLink: '',
         imageDescription: '',
     },
     {
@@ -57,12 +63,14 @@ const items = [
         secondaryButtonLink: '#uno',
         image: true,
         imageLink: 'https://unineuuni.edu.mx/sites/default/files/styles/imagen_730x450/public/noticias/2024-02/15feb_1.jpg?h=225e6152&itok=SJZGX2KS',
+        video: true,
+        videoLink: '',
         imageDescription: 'Este es el champ en el CEO para que lo conozcan',
     }
 
 ];
 
-const duration = 5000
+const duration = 12000
 const frame = ref(0)
 const firstFrameTime = ref(performance.now())
 const active = ref(0)
@@ -99,6 +107,7 @@ watch(active, () => {
 
 <template>
 <div class="w-full min-h-screen flex items-center justify-center relative overflow-x-clip px-8 mb-10 ">
+
     <!-- Background -->
     <div class="h-full w-full absolute top-0 -z-10">
         <div class=" h-1/2 w-1/3 absolute bottom-auto left-auto -right-10 md:-right-40 top-1/4 blur-2xl bg-nprimary/30 rounded-full"></div>
@@ -128,12 +137,20 @@ watch(active, () => {
               leaveTo="opacity-0"
             >
                 
+                
                 <div class="w-full max-w-4xl flex flex-wrap md:flex-nowrap items-strech gap-x-10 gap-y-4">
                     <div v-show="item.image">
                         <div class="w-full h-full flex-grow rounded-md">
                             <img class="w-full h-full object-cover rounded-md" :src="item.imageLink" :alt="item.title">
                         </div>
                     </div>
+
+                    <div v-show="item.video">
+                        <div class="w-full h-full flex-grow rounded-md">
+                            <video class="object-cover absolute top-0 inset-x-0 w-full h-full opacity-30 -z-[50]" :src="item.videoLink" autoplay muted></video>
+                        </div>       
+                    </div>
+                   
                     <div>
                         <h1 class="text-3xl md:text-5xl font-extrabold text-pretty mb-4">{{ item.title }}</h1>
                         <p class="text-sm md:text-base text-pretty mb-5">{{ item.text }}</p>

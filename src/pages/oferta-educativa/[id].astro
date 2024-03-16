@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import EducationalPrograms from "../../components/EducationalPrograms.vue";
+
+export async function getStaticPaths() {
+  const url = `http://localhost:1337/api/grados-academicos/?populate=*`;
+  const respuesta = await fetch(url);
+  const { data } = await respuesta.json();
+
+  return data.map((grado_academico) => ({
+    params: {
+      id: grado_academico.attributes.slug,
+    },
+    props: {
+      grado_academico: grado_academico.attributes,
+      programas_educativos: grado_academico.attributes.programas_educativos,
+    },
+  }));
+}
+
+
+const { nombre, createdAt, slug } = Astro.props.grado_academico;
+const programas_educativos = Astro.props.programas_educativos;
+const programasEducativosArray = programas_educativos.data.map((programa) => programa.attributes);
+---
+<Layout>  
+    <!-- <div class="">
+      {
+        programasEducativosArray.map((programaEducativoItem) => (
+          <p>Nombre: {programaEducativoItem.nombre}</p>
+        ))
+      }
+    </div> -->
+    <EducationalPrograms programasEducativosArray={programasEducativosArray} nombre={nombre}/>
+</Layout>
+
+
