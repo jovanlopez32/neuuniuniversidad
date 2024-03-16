@@ -3,14 +3,14 @@
 interface Props {
     title: string
     text: string
+    cls?: string
 }
 
-const { title, text } = Astro.props
+const { title, text, cls } = Astro.props
 ---
 <div 
-    class="w-full
-    py-6 mb-5 md:mb-20
-    flex flex-col justify-center">
+    class=`w-full
+    flex flex-col justify-center ${cls}`>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-4">
         <div class="w-full h-full grid place-content-start md:place-content-center md:border-r-4 border-r-neutral-800">
@@ -20,7 +20,7 @@ const { title, text } = Astro.props
         <div class="col-span-2 max-w-md">
             <div class="flex items-center gap-x-5 mb-3">
                 <div class="size-3 rounded-full bg-nprimary grid place-content-center "><div class="size-3 rounded-full bg-nprimary animate-ping"></div></div>
-                <h3 class="text-xl font-semibold">{title}</h3>
+                <h3 class="text-3xl font-semibold">{title}</h3>
             </div>
             <p class="text-sm text-pretty ">{text}</p>
         </div>

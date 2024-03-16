@@ -6,10 +6,10 @@ import NeuuniConnectLogo from '../../assets/logos/Neuuni/NeuuniConnect.astro'
 
 ---
 
-<section class="w-full px-10 mt-20">
+<section class="w-full px-10 my-32 ">
     <!-- Movil Title -->
     <div class="block md:hidden mb-10">
-        <h3 class="text-4xl font-extrabold mb-4">Herramientas Neuuni</h3>
+        <h3 class="text-3xl md:text-5xl font-extrabold mb-4">Herramientas Neuuni</h3>
         <p>Nuestra plataforma integra herramientas pedagógicas diseñadas para facilitar la comprensión de los contenidos, explorar en profundidad los temas y mantener un equilibrio entre la educación y la mejor tecnología al alcance de todos.</p>
         <div class="flex flex-wrap gap-x-5 gap-y-5 mt-5">
             <div class="text-sm grid place-content-center py-2 px-5 font-bold text-white bg-nprimary rounded-md">Tecnologia</div>
@@ -23,10 +23,10 @@ import NeuuniConnectLogo from '../../assets/logos/Neuuni/NeuuniConnect.astro'
     <div class="flex w-full">
         
         <!-- Desktop Title -->
-        <div class=" hidden w-full lg:flex items-center justify-center">
-            <aside class="w-full max-w-3xl flex items-center self-start sticky top-1/2  ">
+        <div class=" hidden w-full lg:flex items-center justify-center ">
+            <aside class="w-full max-w-3xl flex items-center self-start sticky top-40  ">
                 <div>
-                   <h3 class="text-3xl md:text-4xl font-extrabold mb-2">Herramientas Neuuni</h3>
+                   <h3 class="text-3xl md:text-5xl font-extrabold mb-2">Herramientas Neuuni</h3>
                    <h4 class="text-xl font-semibold mb-4 text-pretty">Educacion de calidad al alcance de todos.</h4>
                    <p>Nuestra plataforma integra herramientas pedagógicas diseñadas para facilitar la comprensión de los contenidos, explorar en profundidad los temas y mantener un equilibrio entre la educación y la mejor tecnología al alcance de todos.</p>
     
@@ -44,13 +44,13 @@ import NeuuniConnectLogo from '../../assets/logos/Neuuni/NeuuniConnect.astro'
         <!-- Neuuni Tools -->
         <main class="w-full flex flex-col items-start justify-center">
             <ToolsContent title="Neuuni Connect" text="Aprovecha la funcionalidad de Neuuni Connect donde puedes comentar un video en el segundo en donde tengas dudas y los demas pueden verlo y asi ayudarse mutuamente, es genial" >
-                <NeuuniSpaceLogo class="w-20" slot='icon'/>
+                <NeuuniSpaceLogo class="w-24" slot='icon'/>
             </ToolsContent>
-            <ToolsContent title="Neuuni Play" text="Te imaginas una plataforma similar a Netflix completamente gratis y con contenidos de alta calidad, doctores y maestros de todo el mundo.">
-                <NeuuniPlayLogo class="w-20" slot='icon'/>
+            <ToolsContent cls="my-20" title="Neuuni Play" text="Te imaginas una plataforma similar a Netflix completamente gratis y con contenidos de alta calidad, doctores y maestros de todo el mundo.">
+                <NeuuniPlayLogo class="w-24" slot='icon'/>
             </ToolsContent>
             <ToolsContent title="Neuuni Space" text="Neuuni Connect es un blog que te ayuda a aprender sobre las tendencias en el mundo, nos mantiene informados de lo mas relevante que puedas encontrar."> 
-                <NeuuniConnectLogo class="w-20" slot='icon'/>
+                <NeuuniConnectLogo class="w-24" slot='icon'/>
             </ToolsContent>
         </main>
     </div>
