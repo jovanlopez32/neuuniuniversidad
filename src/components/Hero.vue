@@ -53,7 +53,7 @@ const items = [
     },
     {
         title: 'Listo mi champ ya termine el banner.',
-        titleNav: 'Champ gay',
+        titleNav: 'Banner Terminado',
         text: 'Si te fijas en el Hero.vue tengo un arreglo que contienen unos json, esto es para definir lo que vamos a poner en el strapi, entonces checalo porfis hermano y calleseeee perro, saludos a la familia y al magazo.',
         primaryButton: true,
         secondaryButton: true,

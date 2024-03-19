@@ -1,0 +1,63 @@
+---
+import FacebookIcon from '../assets/logos/socialmedia/Facebook.astro';
+import TwitterIcon from '../assets/logos/socialmedia/Twitter.astro';
+import InstagramIcon from '../assets/logos/socialmedia/Instagram.astro';
+import TiktokIcon from '../assets/logos/socialmedia/Tiktok.astro';
+
+---
+
+<footer class="dark:bg-neutral-900 text-neutral-900 dark:text-zinc-100 relative overflow-x-clip ">
+
+  <!-- Gradient -->
+  <div class="absolute w-80 h-32 rounded-full blur-3xl bg-nsecondary/20 right-1/3 top-1/3 rotate-12 z-10"></div>
+  <div class="absolute w-40 h-24 rounded-full blur-3xl bg-nprimary/70 right-0 top-1/3 -rotate-12 z-10"></div>
+  
+  <div class="mx-auto w-full  px-5 pt-16 pb-5 md:px-10 md:py-24 lg:pt-20 lg:pb-10">
+    <!--  -->
+      <div class="flex flex-row justify-between max-[767px]:flex-col max-[767px]:items-start ">
+        <div class="w-full max-w-[560px] max-[991px]:mr-4 max-[991px]:flex-initial max-[767px]:mr-0 z-30">
+          <h2 class="text-3xl font-semibold md:text-5xl">
+            <span class="text-nprimary">Asi de simple</span> es la idea;
+          </h2>
+          <h2 class="text-3xl font-semibold md:text-5xl">
+            asi de grande <span class="text-nprimary">es el reto.</span> 
+          </h2>
+          <div class="flex gap-x-7 mt-8">
+            <a href="#"><FacebookIcon class="w-7 fill-neutral-700 dark:fill-white hover:fill-nprimary dark:hover:fill-nsecondary transition" /></a>
+            <a href="#"><InstagramIcon class="w-7 fill-neutral-700 dark:fill-white hover:fill-nprimary dark:hover:fill-nsecondary transition" /></a>
+            <a href="#"><TiktokIcon class="w-7 fill-neutral-700 dark:fill-white hover:fill-nprimary dark:hover:fill-nsecondary transition" /></a>
+            <a href="#"><TwitterIcon class="w-7 fill-neutral-700 dark:fill-white hover:fill-nprimary dark:hover:fill-nsecondary transition" /></a>
+          </div>
+        </div>
+        <div class="w-full lg:max-w-md flex flex-col justify-between font-medium text-balance  py-4 gap-y-8 mt-12 md:mt-0 ml-0 lg:ml-5">
+          <a href="https://maps.app.goo.gl/VidnC4yFATTYnqoW7" target="_blank" class="flex gap-x-4  hover:text-nprimary transition dark:hover:text-nsecondary z-30">
+            <svg  xmlns="http://www.w3.org/2000/svg"  class="size-6"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg>
+            <span class="w-full lg:max-w-sm">Av. Salvador Nava Martínez 2906, Tangamanga, 78269 San Luis Potosí, S.L.P.</span>
+          </a>
+
+          <a href="mailto:info@unineuuni.edu.mx?Subject=Hola!%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20su%20oferta%20educativa." target="_blank" class="flex gap-x-4  hover:text-nred transition z-30">
+            <svg class="size-6" xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 19h-8a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v5.5" /><path d="M3 7l9 6l9 -6" /><path d="M19 16l-2 3h4l-2 3" /></svg>
+            <span>info@unineuuni.edu.mx</span>
+          </a>
+
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=+524446667570&text=Hola!%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20su%20oferta%20educativa." class="flex gap-x-4  hover:text-npurple dark:hover:text-nyellow transition">
+            <svg  xmlns="http://www.w3.org/2000/svg" class="size-6"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
+            <span>(+52) 444 666 7570</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mb-10 mt-12 w-full border-2 border-neutral-800"></div>
+
+      <div class="flex flex-row items-center justify-between max-[991px]:items-center max-[767px]:flex-col max-[767px]:items-start max-[479px]:flex-col">
+        <div class="text-center text-neutral-900 dark:text-zinc-100 font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:py-1 max-[479px]:mb-4 sm:text-center">
+          <a href="#" class="inline-block py-1.5 pl-0 pr-6 transition hover:text-nred sm:py-2 sm:pr-6 lg:pr-12">Oferta Educativa</a>
+          <a href="#" class="inline-block py-1.5 pl-0 pr-6 transition hover:text-nred sm:py-2 sm:pr-6 lg:pr-12">Webinar</a>
+          <a href="#" class="inline-block py-1.5 pl-0 pr-6 transition hover:text-nred sm:py-2 sm:pr-6 lg:pr-12">Blog Neuuni</a>
+        </div>
+        <div class="max-[991px]:flex-none">
+          <p class="text-neutral-700 dark:text-neutral-400 text-xs font-semibold">© Copyright 2024. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
