@@ -106,7 +106,7 @@ watch(active, () => {
 
 
 <template>
-<div class="w-full min-h-screen flex items-center justify-center relative overflow-x-clip px-8 mb-10 ">
+<div class="w-full min-h-screen flex items-center justify-center relative overflow-x-clip px-8  ">
 
     <!-- Background -->
     <div class="h-full w-full absolute top-0 -z-10">
@@ -151,12 +151,12 @@ watch(active, () => {
                         </div>       
                     </div>
                    
-                    <div>
+                    <div class="text-neutral-900 dark:text-neutral-100">
                         <h1 class="text-3xl md:text-5xl font-extrabold text-pretty mb-4">{{ item.title }}</h1>
                         <p class="text-sm md:text-base text-pretty mb-5">{{ item.text }}</p>
                         <div v-show="item.primaryButton || item.secondaryButton " class="flex flex-wrap gap-y-5 gap-x-8">
                             <!-- Primary button -->
-                            <button v-show="item.primaryButton" class="px-4 py-1.5 rounded-md bg-nprimary text-white font-bold transition duration-200 hover:bg-transparent hover:text-black border-4 border-transparent hover:border-nprimary">{{ item.primaryButtonText }}</button>
+                            <button v-show="item.primaryButton" class="px-4 py-1.5 rounded-md bg-nprimary text-white font-bold transition duration-200 hover:bg-transparent hover:text-black dark:hover:text-neutral-50 border-4 border-transparent hover:border-nprimary">{{ item.primaryButtonText }}</button>
                             <a v-show="item.secondaryButton" href="#_" class="inline-flex items-center justify-center font-semibold duration-200 hover:text-nprimary focus:outline-none focus-visible:outline-gray-600">
                                 {{ item.secondaryButtonText }}  →
                             </a>
@@ -173,9 +173,9 @@ watch(active, () => {
         <template :key="index" v-for="(item, index) in items">
             <button class="p-2 rounded focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 group" @click="active = index">
                 <span class="text-center flex flex-col items-center" :class="active === index ? '' : 'opacity-50 group-hover:opacity-100 group-focus:opacity-100 transition-opacity'">
-                    <span class="block text-xs md:text-sm font-medium text-slate-900 mb-2">{{ item.titleNav }}</span>
+                    <span class="block text-xs md:text-sm font-medium text-neutral-900 dark:text-neutral-50 mb-2">{{ item.titleNav }}</span>
                     <span class="block relative w-full bg-slate-200 h-1 rounded-full" role="progressbar" :aria-valuenow="active === index ? progress : 0" aria-valuemin="0" aria-valuemax="100">
-                    <span class="absolute inset-0 bg-nprimary rounded-[inherit]" :style="`${active === index ? `width: ${progress}%` : 'width: 0%'}`"></span>
+                    <span class="absolute inset-0 bg-nprimary  rounded-[inherit]" :style="`${active === index ? `width: ${progress}%` : 'width: 0%'}`"></span>
                     </span>
                 </span>          
             </button>

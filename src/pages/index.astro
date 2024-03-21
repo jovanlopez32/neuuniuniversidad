@@ -6,16 +6,21 @@ import NeuuniAI from '../components/NeuuniAI/NeuuniAI.astro'
 import About from '../components/About.astro'
 import EducativeOffer from '../components/EducativeOffer.vue'
 import Footer from '../components/Footer.astro'
+import Facts from '../components/Facts.vue'
+import WhatsAppButton from '../components/buttons/WhatsAppButton.vue'
 ---
 
 <Layout>
 
 	<HeroHS client:load />
 	<About />
+	<Facts client:visible/>
 	<!-- <EducativeOffer /> -->
 	<NeuuniTools />
 	<NeuuniAI />
 	<Footer />
+
+	<WhatsAppButton client:visible />
 
 
 </Layout>
