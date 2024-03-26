@@ -106,7 +106,7 @@ watch(active, () => {
 
 
 <template>
-<div class="w-full min-h-screen flex items-center justify-center relative overflow-x-clip px-8  ">
+<div class="w-full min-h-screen flex items-center justify-center relative overflow-x-clip px-5 md:px-10  ">
 
     <!-- Background -->
     <div class="h-full w-full absolute top-0 -z-10">
@@ -169,7 +169,7 @@ watch(active, () => {
     </div>
 
     <!-- Buttons Boottom -->
-    <div class="absolute bottom-5 md:bottom-16 max-w-xs sm:max-w-sm md:max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-1 mt-8">
+    <div class="absolute bottom-0 md:bottom-5 lg:bottom-16 max-w-xs sm:max-w-sm md:max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-1 mt-8">
         <template :key="index" v-for="(item, index) in items">
             <button class="p-2 rounded focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 group" @click="active = index">
                 <span class="text-center flex flex-col items-center" :class="active === index ? '' : 'opacity-50 group-hover:opacity-100 group-focus:opacity-100 transition-opacity'">

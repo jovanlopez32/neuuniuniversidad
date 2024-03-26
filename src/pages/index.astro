@@ -2,12 +2,14 @@
 import Layout from '../layouts/Layout.astro'
 import HeroHS from '../components/Hero.vue'
 import NeuuniTools from '../components/NeuuniTools/NeuuniTools.astro'
+import NeuuniToolsVue from '../components/NeuuniTools/NeuuniTools2.vue'
 import NeuuniAI from '../components/NeuuniAI/NeuuniAI.astro'
 import About from '../components/About.astro'
 import EducativeOffer from '../components/EducativeOffer.vue'
 import Footer from '../components/Footer.astro'
 import Facts from '../components/Facts.vue'
 import WhatsAppButton from '../components/buttons/WhatsAppButton.vue'
+import Funders from '../components/Funders.astro'
 ---
 
 <Layout>
@@ -16,11 +18,12 @@ import WhatsAppButton from '../components/buttons/WhatsAppButton.vue'
 	<About />
 	<Facts client:visible/>
 	<!-- <EducativeOffer /> -->
-	<NeuuniTools />
+	<NeuuniToolsVue client:load />
 	<NeuuniAI />
+	<Funders />
 	<Footer />
 
-	<WhatsAppButton client:visible />
+	<WhatsAppButton client:load />
 
 
 </Layout>

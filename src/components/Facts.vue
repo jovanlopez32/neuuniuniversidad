@@ -28,9 +28,9 @@ onMounted(() => {
 
 </script>
 <template >
-<section class="grid gap-12 md:grid-cols-3 md:gap-16 px-5 lg:px-10 my-24 line-purple">
+<section class="grid gap-12 grid-cols-2 md:grid-cols-4 md:gap-16 px-5 lg:px-10 my-24 line-purple">
     <!-- Block #1 -->
-    <article>
+    <article class="grid place-content-start md:place-content-center">
         <div class="w-14 h-14 rounded dark:shadow-neutral-100 bg-neutral-100 shadow-md  flex justify-center items-center -rotate-6 mb-6">
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="20">
                 <defs>
@@ -55,12 +55,12 @@ onMounted(() => {
             </span>
             <span class="inline-flex font-semibold bg-clip-text text-transparent bg-gradient-to-r from-nprimary to-nsecondary mb-2 text-2xl">En Linea</span>
         </h2>
-        <p class="text-base font-semibold text-neutral-700 dark:text-neutral-300 text-pretty">Estudia en cualquier lugar, mide tu progreso conforme avances al completar tus materias.</p>
-    </article>
+        <!-- <p class="text-base font-semibold text-neutral-700 dark:text-neutral-300 text-pretty">Estudia en cualquier lugar, mide tu progreso conforme avances al completar tus materias.</p> -->
+    </article >
 
     <!-- Block #2 -->
 
-    <article>
+    <article class="grid place-content-end md:place-content-center">
         <div class="w-14 h-14 rounded shadow-md dark:shadow-neutral-100 bg-neutral-100 flex justify-center items-center rotate-12 mb-6">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19">
                 <defs>
@@ -85,10 +85,10 @@ onMounted(() => {
             </span>
             <span class="inline-flex font-semibold bg-clip-text text-transparent bg-gradient-to-r from-nprimary to-nsecondary mb-2 text-2xl">Estudiantes</span>
         </h2>
-        <p class="text-base font-semibold text-neutral-700 dark:text-neutral-300 text-pretty">Nos respaladan, juntos, seguiremos creciendo y alcanzando grandes logros.</p>
-    </article>
+<!--         <p class="text-base font-semibold text-neutral-700 dark:text-neutral-300 text-pretty">Nos respaladan, juntos, seguiremos creciendo y alcanzando grandes logros.</p>
+ -->    </article >
     <!-- Block #3 -->
-    <article>
+    <article class="grid place-content-start md:place-content-center">
         <div class="w-14 h-14 rounded shadow-md dark:shadow-neutral-100 bg-neutral-100 flex justify-center items-center -rotate-12 mb-6">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
                 <defs>
@@ -110,8 +110,36 @@ onMounted(() => {
             </span>
             <span class="inline-flex font-semibold bg-clip-text text-transparent bg-gradient-to-r from-nprimary to-nsecondary mb-2 text-2xl">Seguidores</span>
         </h2>
-        <p class="text-base font-semibold text-neutral-700 dark:text-neutral-300 text-pretty">En la comunidad de Neuuni somos lideres de la educación de todo el mundo.</p>
-    </article>
+<!--         <p class="text-base font-semibold text-neutral-700 dark:text-neutral-300 text-pretty">En la comunidad de Neuuni somos lideres de la educación de todo el mundo.</p>
+ -->    </article >
+
+ <article class="grid place-content-end md:place-content-center">
+        <div class="w-14 h-14 rounded shadow-md dark:shadow-neutral-100 bg-neutral-100 flex justify-center items-center rotate-12 mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19">
+                <defs>
+                    <linearGradient id="icon2-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#3ae9d6" />
+                        <stop offset="100%" stop-color="#0047bb" />
+                    </linearGradient>
+                    <linearGradient id="icon2-b" x1="50%" x2="50%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#3ae9d6" />
+                        <stop offset="100%" stop-color="#0047bb" />
+                    </linearGradient>
+                </defs>
+                <g fill="none" fill-rule="nonzero">
+                    <path fill="url(#icon2-a)" d="M5.5 0a5.5 5.5 0 0 0 0 11c.159 0 .314-.01.469-.024a15.896 15.896 0 0 1-2.393 6.759A.5.5 0 0 0 4 18.5h1a.5.5 0 0 0 .362-.155C7.934 15.64 11 11.215 11 5.5A5.506 5.506 0 0 0 5.5 0Z" />
+                    <path fill="url(#icon2-b)" d="M18.5 0a5.5 5.5 0 0 0 0 11c.159 0 .314-.01.469-.024a15.896 15.896 0 0 1-2.393 6.759.5.5 0 0 0 .424.765h1a.5.5 0 0 0 .363-.155C20.934 15.64 24 11.215 24 5.5A5.506 5.506 0 0 0 18.5 0Z" />
+                </g>
+            </svg>
+        </div>
+        <h2>
+            <span  class="flex text-slate-900 dark:text-neutral-100 text-5xl font-extrabold mb-2">
+                <span :ref="el => numbers.push(el)">2000</span> +
+            </span>
+            <span class="inline-flex font-semibold bg-clip-text text-transparent bg-gradient-to-r from-nprimary to-nsecondary mb-2 text-2xl">Estudiantes</span>
+        </h2>
+<!--         <p class="text-base font-semibold text-neutral-700 dark:text-neutral-300 text-pretty">Nos respaladan, juntos, seguiremos creciendo y alcanzando grandes logros.</p>
+ -->    </article >
 
 </section>
 
